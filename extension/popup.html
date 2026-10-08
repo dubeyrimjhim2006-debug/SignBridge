@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignBridge subtitles</title>
+    <style>
+      body {
+        width: 250px;
+        margin: 0;
+        padding: 18px;
+        color: #183d35;
+        font: 14px Arial, sans-serif;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: 18px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px 12px;
+        border: 0;
+        border-radius: 6px;
+        background: #27826a;
+        color: #fff;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+
+      #status {
+        min-height: 2.8em;
+        margin: 12px 0 0;
+        color: #435b54;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SignBridge</h1>
+    <button id="toggle" type="button" disabled>Start subtitles</button>
+    <p id="status" role="status">Checking this tab...</p>
+    <script src="popup.js"></script>
+  </body>
+</html>

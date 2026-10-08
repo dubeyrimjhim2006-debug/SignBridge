@@ -1,0 +1,35 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "signbridge",
+	"main": "cloudflare/worker.js",
+	"compatibility_date": "2026-10-04",
+	"workers_dev": true,
+	"assets": {
+		"directory": "./client/dist",
+		"binding": "ASSETS",
+		"not_found_handling": "single-page-application",
+		"run_worker_first": true
+	},
+	"d1_databases": [
+  {
+    "binding": "DB",
+    "database_name": "signbridge-db",
+    "database_id": "0ffbfa4e-3c90-4025-bb9e-528b5ab630c8",
+    "migrations_dir": "cloudflare/migrations"
+  }
+],
+	
+	"ratelimits": [
+		{
+			"name": "TRANSCRIPTION_LIMITER",
+			"namespace_id": "1001",
+			"simple": {
+				"limit": 5,
+				"period": 60
+			}
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}

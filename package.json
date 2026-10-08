@@ -1,0 +1,19 @@
+{
+  "name": "ai-sign-language-smart-lecture",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "cloudflare:login": "wrangler login",
+    "cloudflare:dev": "npm --prefix client run build && wrangler dev",
+    "cloudflare:deploy": "npm --prefix client run build && wrangler deploy",
+    "cloudflare:d1:create": "wrangler d1 create signbridge-db",
+    "cloudflare:d1:migrate": "wrangler d1 migrations apply signbridge-db --remote"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "wrangler": "^4.147.0"
+  }
+}

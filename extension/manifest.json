@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "SignBridge Live Subtitles",
+  "version": "0.1.0",
+  "description": "Local live subtitles overlay for Google Meet.",
+  "host_permissions": [
+    "https://meet.google.com/*"
+  ],
+  "action": {
+    "default_title": "SignBridge subtitles",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*.png"
+      ],
+      "matches": [
+        "https://meet.google.com/*"
+      ]
+    }
+  ]
+}

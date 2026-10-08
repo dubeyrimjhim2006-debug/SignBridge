@@ -1,0 +1,72 @@
+#signbridge-subtitles {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    position: fixed;
+    z-index: 2147483647;
+    box-sizing: border-box;
+    pointer-events: none;
+
+    left: 8%;
+    right: 8%;
+    bottom: 8%;
+
+    padding: 22px 28px;
+
+    background: rgba(12, 28, 25, 0.92);
+    color: #fff;
+
+    border: 2px solid #d5f05d;
+    border-radius: 14px;
+
+    font: 22px Arial, sans-serif;
+    line-height: 1.45;
+
+    box-shadow: 0 8px 35px #0008;
+}
+
+
+/* Subtitle text area */
+.signbridge-content {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* Small SignBridge label */
+#signbridge-subtitles small {
+    display: block;
+    margin-bottom: 6px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    color: #d5f05d;
+}
+
+
+/* Live transcript */
+#signbridge-text {
+    overflow-wrap: anywhere;
+}
+
+
+/* Cropped ISL sign */
+#signbridge-subtitles .sign-image {
+    flex: 0 0 auto;
+
+    width: 130px;
+    height: 110px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 8px;
+
+    padding: 4px;
+
+    box-sizing: border-box;
+}
